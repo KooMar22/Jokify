@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/stil.css">
-    <title>Joke API</title>
+    <title>Jokify Joke API</title>
 </head>
 
 <body>
@@ -22,15 +22,18 @@
             </select>
             <button type="submit" class="form-submit">Get a Joke</button>
         </form>
+        <!-- If joke is to be found within selected category, display the result -->
         <% if (locals.joke) { %>
             <div class="joke-card">
                 <%= joke %>
                 <p class="selected-category">Category: <%= selectedCategory %></p>
             </div>
+            <!-- Display errors if any -->
             <% } else if (error) { %>
                 <div class="error-message">
                     <%= error %>
                 </div>
+            <!-- Upon loading the site (no jokes yet), display this message -->
             <% } else { %>
                 <h3>Select a Joke Category</h3>
         <% } %>
