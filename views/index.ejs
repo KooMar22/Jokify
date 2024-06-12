@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/stil.css">
+    <title>Joke API</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">JokiFy<br>by KooMar</h1>
+        <h2 class="description">Get the latest joke of the day: </h2>
+        <form action="/" class="form" method="post">
+            <select name="category" class="form-select">
+                <option value="Programming" <% if (selectedCategory == "Programming") { %>selected<% } %>>Programming</option>
+                <option value="Misc" <% if (selectedCategory == "Misc") { %>selected<% } %>>Misc</option>
+                <option value="Pun" <% if (selectedCategory =="Pun") { %>selected<% } %>>Pun</option>
+                <option value="Dark" <% if (selectedCategory =="Dark") { %>selected<% } %>>Dark</option>
+                <option value="Any" <% if (selectedCategory == "Any") { %>selected<% } %>>Any</option>
+            </select>
+            <button type="submit" class="form-submit">Get a Joke</button>
+        </form>
+        <% if (locals.joke) { %>
+            <div class="joke-card">
+                <%= joke %>
+                <p class="selected-category">Category: <%= selectedCategory %></p>
+            </div>
+            <% } else if (error) { %>
+                <div class="error-message">
+                    <%= error %>
+                </div>
+            <% } else { %>
+                <h3>Select a Joke Category</h3>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+    background-color: powderblue;
+    padding: 0;
+    margin: 0;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: blueviolet;
+    justify-self: center;
+}
+
+.description {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    justify-self: center;
+}
+
+.form-submit {
+    margin-left: 10px;
+}
+
+.form-submit:hover {
+    background-color: green;
+}
+
+.joke-card {
+    border: 5px solid blanchedalmond;
+    margin: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 350px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.selected-category {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: left;
+    font-size: 0.8rem;
+}
